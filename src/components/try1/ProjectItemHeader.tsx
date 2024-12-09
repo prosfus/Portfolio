@@ -16,7 +16,6 @@ function ProjectItemHeader({
   title,
   number,
   screenshot,
-  isAppSelected,
   onClick,
 }: Props) {
   const [isHovered, setIsHovered] = useState(false);

@@ -1,8 +1,6 @@
 :root {
   font-family: "Geist", system-ui, Avenir, Helvetica, Arial, sans-serif;
-
-  background-color: #ffffff;
-
+  background-color: #d9d9d9;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -13,18 +11,41 @@
   margin: 0;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
   padding: 0;
+  font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 1rem;
+}
+
+.app-button {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  outline: none;
+  margin: 0;
+  cursor: pointer;
+  border-radius: 0.5rem;
   display: flex;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+
+.app-input {
+  border: none;
+  outline: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  font-family: "Geist", system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: bold;
 }
