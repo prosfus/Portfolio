@@ -5,7 +5,6 @@ import ProyectCard from "./ProyectCard";
 import { AnimatePresence } from "motion/react";
 import CTI from "./components/CTI";
 import HighlightedComponent from "./components/HighlightedComponent";
-import Link from "./components/LinkSVG";
 
 function App() {
   const [itemHovered, setItemHovered] = useState<string>();
