@@ -70,24 +70,24 @@ function App() {
           >
             <AnimatePresence mode="popLayout">
               <HighlightedComponent
-                key="email"
-                id="00"
-                itemHovered={itemHovered}
-                itemSelected={itemSelected}
-              >
-                <Email
-                  key="email"
-                  auto={itemHovered === "00" && itemSelected !== "00"}
-                />
-              </HighlightedComponent>
-              <HighlightedComponent
                 key="cti"
-                id="01"
+                id="00"
                 itemHovered={itemHovered}
                 itemSelected={itemSelected}
               >
                 <CTI
                   key="cti"
+                  auto={itemHovered === "00" && itemSelected !== "00"}
+                />
+              </HighlightedComponent>
+              <HighlightedComponent
+                key="email"
+                id="01"
+                itemHovered={itemHovered}
+                itemSelected={itemSelected}
+              >
+                <Email
+                  key="email"
                   auto={itemHovered === "01" && itemSelected !== "01"}
                 />
               </HighlightedComponent>
@@ -133,9 +133,10 @@ function App() {
               SHOWCASE
             </motion.h1>
           </div>
+
           <ProyectCard
             id={"00"}
-            name="EMAIL"
+            name="CTI"
             setItemHovered={setItemHovered}
             setItemSelected={setItemSelected}
             isSelected={itemSelected === "00"}
@@ -143,7 +144,7 @@ function App() {
           />
           <ProyectCard
             id={"01"}
-            name="CTI"
+            name="EMAIL"
             setItemHovered={setItemHovered}
             setItemSelected={setItemSelected}
             isSelected={itemSelected === "01"}
