@@ -86,7 +86,10 @@ function App() {
                 itemHovered={itemHovered}
                 itemSelected={itemSelected}
               >
-                <CTI key="cti" />
+                <CTI
+                  key="cti"
+                  auto={itemHovered === "01" && itemSelected !== "01"}
+                />
               </HighlightedComponent>
             </AnimatePresence>
           </div>
