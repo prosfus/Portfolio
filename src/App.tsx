@@ -5,6 +5,7 @@ import ProyectCard from "./ProyectCard";
 import { AnimatePresence } from "motion/react";
 import CTI from "./components/CTI";
 import HighlightedComponent from "./components/HighlightedComponent";
+import Link from "./components/LinkSVG";
 
 function App() {
   const [itemHovered, setItemHovered] = useState<string>();
@@ -18,6 +19,7 @@ function App() {
         backgroundColor: "#d9d9d9",
         display: "flex",
         alignItems: "center",
+        overflow: "hidden",
       }}
     >
       <div
@@ -41,6 +43,7 @@ function App() {
             padding: "4rem 0 1rem 0",
           }}
         >
+          {/*  <Link text="Pau Rostoll Fuset" link="https://www.google.com" /> */}
           <div>Pau Rostoll Fuset</div>
           <div>CV</div>
           <div>LinkedIn</div>
@@ -73,7 +76,10 @@ function App() {
                 itemHovered={itemHovered}
                 itemSelected={itemSelected}
               >
-                <Email key="email" />
+                <Email
+                  key="email"
+                  auto={itemHovered === "00" && itemSelected !== "00"}
+                />
               </HighlightedComponent>
               <HighlightedComponent
                 key="cti"
@@ -134,7 +140,7 @@ function App() {
           />
           <ProyectCard
             id={"01"}
-            name="CALLS"
+            name="CTI"
             setItemHovered={setItemHovered}
             setItemSelected={setItemSelected}
             isSelected={itemSelected === "01"}

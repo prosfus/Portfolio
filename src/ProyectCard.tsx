@@ -19,8 +19,8 @@ export default function ProyectCard({
     <motion.div
       initial={{ width: "18rem" }}
       layoutId={`proyect-card-${id}`}
-      animate={{ width: isSelected ? "50rem" : "18rem" }}
-      whileHover={{ width: "50rem", paddingLeft: "5rem" }}
+      animate={{ width: isSelected ? "auto" : "18rem", padding: isSelected ? '0rem 5rem' : '0rem 0rem' }}
+      whileHover={{ width:"auto", padding: "0rem 5rem" }}
       onHoverStart={() => setItemHovered(id)}
       onHoverEnd={() => setItemHovered(undefined)}
       onClick={() => setItemSelected(isSelected ? undefined : id)}

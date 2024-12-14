@@ -8,13 +8,35 @@ import {
   User,
 } from "lucide-react";
 import { AnimatePresence, motion, MotionConfig } from "motion/react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 type Mode = "collapsed" | "expanded" | "editing";
+const modeSequence: Mode[] = [
+  "collapsed",
+  "expanded",
+  "editing",
+  "expanded",
+  "collapsed",
+];
 
-export default function EmailItem() {
+export default function EmailItem({ auto }: { auto: boolean }) {
   const [mode, setMode] = useState<Mode>("collapsed");
   const isExpanded = mode === "expanded" || mode === "editing";
+
+  useEffect(() => {
+    if (!auto) return;
+
+    let index = 0;
+
+    setMode(modeSequence[index]);
+
+    const interval = setInterval(() => {
+      index = (index + 1) % modeSequence.length;
+      setMode(modeSequence[index]);
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [auto]);
 
   return (
     <motion.div
@@ -203,6 +225,7 @@ export default function EmailItem() {
                     placeholder="Cuerpo"
                     className="app-input"
                     rows={5}
+                    style={{ resize: "none" }}
                   />
                 </div>
                 <div
@@ -243,7 +266,13 @@ export default function EmailItem() {
                     >
                       <Paperclip />
                     </button>
-                    <button className="app-button">
+                    <button
+                      className="app-button"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setMode("expanded");
+                      }}
+                    >
                       <SendHorizonal />
                     </button>
                   </div>
