@@ -37,7 +37,6 @@ export default function AudioBars() {
       {barHeights.map((height, index) => (
         <motion.div
           key={index}
-          className="w-0.5 mx-0.5 bg-green-500"
           animate={{
             height: `${height * maxHeight}%`,
             marginTop: `${((1 - height) * maxHeight) / 2}%`,
@@ -45,7 +44,7 @@ export default function AudioBars() {
           }}
           style={{
             height: `${height * maxHeight}%`,
-            backgroundColor: "#00FF00",
+            backgroundColor: "#4ade80",
             width: "2px",
             margin: "0 1px",
           }}

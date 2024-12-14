@@ -153,8 +153,8 @@ function CTI({ auto }: Props) {
           >
             <motion.div
               animate={{
-                color: isInCall ? "#00FF00" : "#d9d9d9",
-                fill: isInCall ? "#00FF00" : "#00000",
+                color: isInCall ? "#4ade80" : "#d9d9d9",
+                fill: isInCall ? "#4ade80" : "#00000",
               }}
               style={{ display: "flex", alignItems: "center" }}
             >
@@ -299,7 +299,7 @@ function CTI({ auto }: Props) {
                     style={{
                       width: 20,
                       height: 20,
-                      color: "#FF9999",
+                      color: "#ef4444",
                       marginTop: "1px",
                     }}
                     onClick={() => {

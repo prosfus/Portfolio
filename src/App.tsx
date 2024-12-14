@@ -139,6 +139,7 @@ function App() {
             setItemHovered={setItemHovered}
             setItemSelected={setItemSelected}
             isSelected={itemSelected === "00"}
+            isHovered={itemHovered === "00"}
           />
           <ProyectCard
             id={"01"}
@@ -146,6 +147,7 @@ function App() {
             setItemHovered={setItemHovered}
             setItemSelected={setItemSelected}
             isSelected={itemSelected === "01"}
+            isHovered={itemHovered === "01"}
           />
         </div>
       </div>
