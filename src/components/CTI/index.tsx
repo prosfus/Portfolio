@@ -57,7 +57,7 @@ function CTI({ auto }: Props) {
 
   const [isInCall, setIsInCall] = useState(false);
 
-  const [hoverTimeout, setHoverTimeout] = useState<number | null>(null);
+  const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
 
   const handleMouseEnter = () => {
     if (hoverTimeout) {
