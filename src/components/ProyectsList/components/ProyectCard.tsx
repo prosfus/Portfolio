@@ -1,24 +1,22 @@
 import { motion } from "framer-motion";
 import { ArrowUpRight, X } from "lucide-react";
 import { AnimatePresence, MotionConfig } from "motion/react";
+import { useItemContext } from "@/context/useItemContext";
+import { ProyectItem } from "@/models/ProyectItem";
 
 interface ProyectCardProps {
-  id: string;
+  id: ProyectItem;
+  number: string;
   name: string;
-  setItemHovered: (id?: string) => void;
-  setItemSelected: (id?: string) => void;
-  isSelected: boolean;
-  isHovered: boolean;
 }
 
-export default function ProyectCard({
-  id,
-  name,
-  setItemHovered,
-  setItemSelected,
-  isSelected,
-  isHovered,
-}: ProyectCardProps) {
+export default function ProyectCard({ id, name, number }: ProyectCardProps) {
+  const { setItemHovered, setItemSelected, itemHovered, itemSelected } =
+    useItemContext();
+
+  const isSelected = itemSelected === id;
+  const isHovered = itemHovered === id;
+
   return (
     <motion.div
       initial={{ width: "12rem" }}
@@ -131,7 +129,7 @@ export default function ProyectCard({
           lineHeight: "14px",
         }}
       >
-        <span>{id}.</span>
+        <span>{number}.</span>
       </motion.div>
       <motion.h1
         layoutId={`proyect-card-name-${id}`}

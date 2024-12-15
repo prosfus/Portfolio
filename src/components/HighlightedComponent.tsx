@@ -1,18 +1,14 @@
+import { useItemContext } from "@/context/useItemContext";
+import { ProyectItem } from "@/models/ProyectItem";
 import { motion } from "motion/react";
 
 interface Props {
-  itemHovered?: string;
-  itemSelected?: string;
-  id: string;
+  id: ProyectItem;
   children: React.ReactNode;
 }
 
-export default function HighlightedComponent({
-  itemHovered,
-  itemSelected,
-  id,
-  children,
-}: Props) {
+export default function HighlightedComponent({ id, children }: Props) {
+  const { itemHovered, itemSelected } = useItemContext();
   const isHovered = itemHovered === id;
   const isSelected = itemSelected === id;
 

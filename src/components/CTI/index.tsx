@@ -11,12 +11,14 @@ import { useRef, useState, useEffect } from "react";
 import useMeasure from "react-use-measure";
 import AudioBars from "./components/AudioBars";
 import PadNumber from "./components/PadNumber";
+import { useItemContext } from "@/context/useItemContext";
+import { ProyectItem } from "@/models/ProyectItem";
 
-interface Props {
-  auto?: boolean;
-}
+function CTI() {
+  const { itemHovered, itemSelected } = useItemContext();
+  const auto =
+    itemHovered === ProyectItem.CTI && itemSelected !== ProyectItem.CTI;
 
-function CTI({ auto }: Props) {
   const [isHovering, setIsHovering] = useState(false);
   const [ref, bounds] = useMeasure();
   const [isPadOpen, setIsPadOpen] = useState(false);
