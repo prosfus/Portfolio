@@ -109,7 +109,7 @@ function App() {
             display: "flex",
             flexDirection: "row",
             alignItems: "baseline",
-            padding: "4rem 0 0 0",
+            padding: "2rem 0 0 0",
             position: "relative",
           }}
         >

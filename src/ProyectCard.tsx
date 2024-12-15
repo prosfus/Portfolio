@@ -62,7 +62,7 @@ export default function ProyectCard({
             <motion.div
               layout
               style={{
-                backgroundColor: isSelected ? "#ef444466" : "#9d9d9d66",
+                backgroundColor: "#9d9d9d66",
                 borderRadius: "10px",
                 padding: "1rem 2rem",
                 display: "flex",
