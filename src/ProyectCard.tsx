@@ -38,6 +38,7 @@ export default function ProyectCard({
         justifyContent: "flex-start",
         alignItems: "center",
         maxHeight: "10rem",
+        minWidth: "18rem",
         overflow: "hidden",
         borderRight: "1px solid #AEAEAE",
         cursor: "pointer",
@@ -133,7 +134,7 @@ export default function ProyectCard({
       </motion.div>
       <motion.h1
         layoutId={`proyect-card-name-${id}`}
-        style={{ fontSize: "14rem" }}
+        style={{ fontSize: "14rem", fontWeight: "bold" }}
       >
         {name}
       </motion.h1>

@@ -5,6 +5,7 @@ import ProyectCard from "./ProyectCard";
 import { AnimatePresence } from "motion/react";
 import CTI from "./components/CTI";
 import HighlightedComponent from "./components/HighlightedComponent";
+import { Dashboard } from "./components/Dashboard";
 
 function App() {
   const [itemHovered, setItemHovered] = useState<string>();
@@ -91,6 +92,14 @@ function App() {
                   auto={itemHovered === "01" && itemSelected !== "01"}
                 />
               </HighlightedComponent>
+              <HighlightedComponent
+                key="metrics"
+                id="02"
+                itemHovered={itemHovered}
+                itemSelected={itemSelected}
+              >
+                <Dashboard />
+              </HighlightedComponent>
             </AnimatePresence>
           </div>
         </div>
@@ -133,23 +142,39 @@ function App() {
               SHOWCASE
             </motion.h1>
           </div>
-
-          <ProyectCard
-            id={"00"}
-            name="CTI"
-            setItemHovered={setItemHovered}
-            setItemSelected={setItemSelected}
-            isSelected={itemSelected === "00"}
-            isHovered={itemHovered === "00"}
-          />
-          <ProyectCard
-            id={"01"}
-            name="EMAIL"
-            setItemHovered={setItemHovered}
-            setItemSelected={setItemSelected}
-            isSelected={itemSelected === "01"}
-            isHovered={itemHovered === "01"}
-          />
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              display: "flex",
+              overflow: "hidden",
+            }}
+          >
+            <ProyectCard
+              id={"00"}
+              name="CTI"
+              setItemHovered={setItemHovered}
+              setItemSelected={setItemSelected}
+              isSelected={itemSelected === "00"}
+              isHovered={itemHovered === "00"}
+            />
+            <ProyectCard
+              id={"01"}
+              name="EMAIL"
+              setItemHovered={setItemHovered}
+              setItemSelected={setItemSelected}
+              isSelected={itemSelected === "01"}
+              isHovered={itemHovered === "01"}
+            />
+            <ProyectCard
+              id={"02"}
+              name="METRICS"
+              setItemHovered={setItemHovered}
+              setItemSelected={setItemSelected}
+              isSelected={itemSelected === "02"}
+              isHovered={itemHovered === "02"}
+            />
+          </div>
         </div>
       </div>
     </div>
