@@ -21,24 +21,24 @@ export default function ProyectCard({
 }: ProyectCardProps) {
   return (
     <motion.div
-      initial={{ width: "18rem" }}
+      initial={{ width: "12rem" }}
       layoutId={`proyect-card-${id}`}
       animate={{
-        width: isSelected ? "auto" : "18rem",
-        padding: isSelected ? "0rem 5rem" : "0rem 0rem",
+        width: isSelected ? "auto" : "12rem",
+        padding: isSelected ? "0rem 3rem" : "0rem 0rem",
       }}
-      whileHover={{ width: "auto", padding: "0rem 5rem" }}
+      whileHover={{ width: "auto", padding: "0rem 3rem" }}
       onHoverStart={() => setItemHovered(id)}
       onHoverEnd={() => setItemHovered(undefined)}
       onClick={() => setItemSelected(isSelected ? undefined : id)}
       style={{
-        height: "10rem",
+        height: "5.5rem",
         display: "flex",
         flexDirection: "row",
         justifyContent: "flex-start",
         alignItems: "center",
         maxHeight: "10rem",
-        minWidth: "18rem",
+        minWidth: "12rem",
         overflow: "hidden",
         borderRight: "1px solid #AEAEAE",
         cursor: "pointer",
@@ -64,11 +64,11 @@ export default function ProyectCard({
               style={{
                 backgroundColor: "#9d9d9d66",
                 borderRadius: "10px",
-                padding: "1rem 2rem",
+                padding: "0.5rem 1rem",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                gap: "1rem",
+                gap: "0.5rem",
                 backdropFilter: "blur(6px)",
               }}
             >
@@ -90,7 +90,7 @@ export default function ProyectCard({
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
-                        gap: "1rem",
+                        gap: "0.5rem",
                       }}
                     >
                       <span>See more</span>
@@ -107,7 +107,7 @@ export default function ProyectCard({
                         display: "flex",
                         justifyContent: "center",
                         alignItems: "center",
-                        gap: "1rem",
+                        gap: "0.5rem",
                       }}
                     >
                       <span>Close</span>
@@ -128,13 +128,14 @@ export default function ProyectCard({
           display: "flex",
           justifyContent: "center",
           alignItems: "flex-start",
+          lineHeight: "14px",
         }}
       >
         <span>{id}.</span>
       </motion.div>
       <motion.h1
         layoutId={`proyect-card-name-${id}`}
-        style={{ fontSize: "14rem", fontWeight: "bold" }}
+        style={{ fontSize: "8rem", fontWeight: "bold" }}
       >
         {name}
       </motion.h1>

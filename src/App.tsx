@@ -6,6 +6,8 @@ import { AnimatePresence } from "motion/react";
 import CTI from "./components/CTI";
 import HighlightedComponent from "./components/HighlightedComponent";
 import { Dashboard } from "./components/Dashboard";
+import DialappletLogo from "./assets/dialapplet.webp";
+import OSCARLogo from "./assets/oscar.png";
 
 function App() {
   const [itemHovered, setItemHovered] = useState<string>();
@@ -93,7 +95,7 @@ function App() {
                 />
               </HighlightedComponent>
               <HighlightedComponent
-                key="metrics"
+                key="dashboard"
                 id="02"
                 itemHovered={itemHovered}
                 itemSelected={itemSelected}
@@ -109,7 +111,6 @@ function App() {
             display: "flex",
             flexDirection: "row",
             alignItems: "baseline",
-            padding: "2rem 0 0 0",
             position: "relative",
           }}
         >
@@ -142,14 +143,67 @@ function App() {
               SHOWCASE
             </motion.h1>
           </div>
-          <div
+          <motion.div
             style={{
-              width: "100%",
               height: "100%",
               display: "flex",
-              overflow: "hidden",
+              position: "relative",
             }}
           >
+            <AnimatePresence>
+              {itemHovered && (
+                <motion.img
+                  src={DialappletLogo}
+                  initial={{
+                    opacity: 0,
+                    filter: "blur(6px)",
+                    y: 10,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    filter: "blur(0px)",
+                    y: 0,
+                  }}
+                  exit={{
+                    opacity: 0,
+                    filter: "blur(6px)",
+                    y: 10,
+                  }}
+                  height={20}
+                  width={20}
+                  style={{
+                    position: "absolute",
+                    left: 2,
+
+                    y: -4,
+                    bottom: 6,
+                    zIndex: 20,
+                  }}
+                  transition={{
+                    duration: 0.3,
+                    type: "spring",
+                    bounce: 0,
+                  }}
+                />
+              )}
+            </AnimatePresence>
+            <motion.div
+              animate={{
+                height: itemHovered ? "5px" : "2px",
+              }}
+              style={{
+                position: "absolute",
+                bottom: 0,
+                width: "100%",
+                background: "#385cc7",
+                zIndex: 2,
+              }}
+              transition={{
+                duration: 0.3,
+                type: "spring",
+                bounce: 0,
+              }}
+            ></motion.div>
             <ProyectCard
               id={"00"}
               name="CTI"
@@ -168,13 +222,99 @@ function App() {
             />
             <ProyectCard
               id={"02"}
-              name="METRICS"
+              name="DASHBOARD"
               setItemHovered={setItemHovered}
               setItemSelected={setItemSelected}
               isSelected={itemSelected === "02"}
               isHovered={itemHovered === "02"}
             />
-          </div>
+          </motion.div>
+          <motion.div
+            style={{
+              height: "100%",
+              display: "flex",
+              position: "relative",
+            }}
+          >
+            <AnimatePresence>
+              {itemHovered && (
+                <motion.img
+                  src={OSCARLogo}
+                  initial={{
+                    opacity: 0,
+                    filter: "blur(6px)",
+                    y: 10,
+                  }}
+                  animate={{
+                    opacity: 1,
+                    filter: "blur(0px)",
+                    y: 0,
+                  }}
+                  exit={{
+                    opacity: 0,
+                    filter: "blur(6px)",
+                    y: 10,
+                  }}
+                  height={20}
+                  width={20}
+                  style={{
+                    position: "absolute",
+                    left: 2,
+
+                    y: -4,
+                    bottom: 6,
+                    zIndex: 20,
+                  }}
+                  transition={{
+                    duration: 0.3,
+                    type: "spring",
+                    bounce: 0,
+                  }}
+                />
+              )}
+            </AnimatePresence>
+            <motion.div
+              animate={{
+                height: itemHovered ? "5px" : "2px",
+              }}
+              style={{
+                position: "absolute",
+                bottom: 0,
+                width: "100%",
+                background: "#009688",
+                zIndex: 2,
+              }}
+              transition={{
+                duration: 0.3,
+                type: "spring",
+                bounce: 0,
+              }}
+            ></motion.div>
+            <ProyectCard
+              id={"00"}
+              name="CTI"
+              setItemHovered={setItemHovered}
+              setItemSelected={setItemSelected}
+              isSelected={itemSelected === "00"}
+              isHovered={itemHovered === "00"}
+            />
+            <ProyectCard
+              id={"01"}
+              name="EMAIL"
+              setItemHovered={setItemHovered}
+              setItemSelected={setItemSelected}
+              isSelected={itemSelected === "01"}
+              isHovered={itemHovered === "01"}
+            />
+            <ProyectCard
+              id={"02"}
+              name="DASHBOARD"
+              setItemHovered={setItemHovered}
+              setItemSelected={setItemSelected}
+              isSelected={itemSelected === "02"}
+              isHovered={itemHovered === "02"}
+            />
+          </motion.div>
         </div>
       </div>
     </div>
