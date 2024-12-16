@@ -1,11 +1,6 @@
-import Email from "./components/Email";
-import { AnimatePresence } from "motion/react";
-import CTI from "./components/CTI";
-import HighlightedComponent from "./components/HighlightedComponent";
-import { Dashboard } from "./components/Dashboard";
 import { ProyectsList } from "./components/ProyectsList";
-import { ProyectItem } from "./models/ProyectItem";
 import { TopBar } from "./components/Topbar";
+import MainArea from "./components/MainArea";
 
 function App() {
   return (
@@ -32,29 +27,7 @@ function App() {
         }}
       >
         <TopBar />
-        <div
-          style={{
-            flexGrow: 1,
-            flexBasis: 0,
-            overflow: "hidden",
-            width: "100%",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          <AnimatePresence mode="popLayout">
-            <HighlightedComponent key="cti" id={ProyectItem.CTI}>
-              <CTI key="cti-content" />
-            </HighlightedComponent>
-            <HighlightedComponent key="email" id={ProyectItem.EMAIL}>
-              <Email key="email-content" />
-            </HighlightedComponent>
-            <HighlightedComponent key="dashboard" id={ProyectItem.DASHBOARD}>
-              <Dashboard key="dashboard-content" />
-            </HighlightedComponent>
-          </AnimatePresence>
-        </div>
+        <MainArea />
         <ProyectsList />
       </div>
     </div>
