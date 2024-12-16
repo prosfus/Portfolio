@@ -22,7 +22,7 @@ export default function ProyectCard({ id, name, number }: ProyectCardProps) {
       initial={{ width: "12rem" }}
       layoutId={`proyect-card-${id}`}
       animate={{
-        width: isSelected ? "auto" : "12rem",
+        width: isSelected ? "auto" : "16rem",
         padding: isSelected ? "0rem 3rem" : "0rem 0rem",
       }}
       whileHover={{ width: "auto", padding: "0rem 3rem" }}
@@ -81,9 +81,9 @@ export default function ProyectCard({ id, name, number }: ProyectCardProps) {
                   {isHovered && !isSelected && (
                     <motion.div
                       key="see-more"
-                      initial={{ opacity: 0, filter: "blur(6px)" }}
-                      animate={{ opacity: 1, filter: "blur(0px)" }}
-                      exit={{ opacity: 0, filter: "blur(6px)" }}
+                      initial={{ opacity: 0, y: 10, filter: "blur(6px)" }}
+                      animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                      exit={{ opacity: 0, y: -10, filter: "blur(6px)" }}
                       style={{
                         display: "flex",
                         justifyContent: "center",
@@ -91,16 +91,16 @@ export default function ProyectCard({ id, name, number }: ProyectCardProps) {
                         gap: "0.5rem",
                       }}
                     >
-                      <span>See more</span>
+                      <motion.span key={"see-more-span"}>See more</motion.span>
                       <ArrowUpRight size={20} />
                     </motion.div>
                   )}
                   {isSelected && (
                     <motion.div
                       key="close"
-                      initial={{ opacity: 0, filter: "blur(6px)" }}
-                      animate={{ opacity: 1, filter: "blur(0px)" }}
-                      exit={{ opacity: 0, filter: "blur(6px)" }}
+                      initial={{ opacity: 0, y: 10, filter: "blur(6px)" }}
+                      animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+                      exit={{ opacity: 0, y: -10, filter: "blur(6px)" }}
                       style={{
                         display: "flex",
                         justifyContent: "center",
@@ -108,7 +108,7 @@ export default function ProyectCard({ id, name, number }: ProyectCardProps) {
                         gap: "0.5rem",
                       }}
                     >
-                      <span>Close</span>
+                      <motion.span key={"close-span"}>Close</motion.span>
                       <X size={20} />
                     </motion.div>
                   )}
