@@ -33,7 +33,7 @@ export function CTIText() {
         only the first message. A dedicated view is available for managing
         ongoing conversations.
       </p>
-      <h2>Technology Stack:</h2>
+      <h2>Technology stack:</h2>
       <ul>
         <li>
           <b>WebRTC</b> for real-time communications
