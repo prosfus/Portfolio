@@ -1,7 +1,7 @@
 export function DashboardsText() {
   return (
     <>
-      <h2>Charts. 📈</h2>
+      <h2>About charts. 📈</h2>
 
       <p>
         Allows <b>real-time</b> visualization of information and KPIs related to

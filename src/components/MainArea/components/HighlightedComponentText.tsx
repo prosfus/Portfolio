@@ -4,6 +4,7 @@ import { AnimatePresence, motion, MotionConfig } from "motion/react";
 import { CTIText } from "./texts/CTIText";
 import { EmailText } from "./texts/EmailText";
 import { DashboardsText } from "./texts/DashboardsText";
+import { OSCARText } from "./texts/OSCARText";
 
 export function HighlightedComponentText() {
   const { itemSelected, itemHovered } = useItemContext();
@@ -30,6 +31,7 @@ export function HighlightedComponentText() {
             {itemSelected === ProyectItem.CTI && <CTIText />}
             {itemSelected === ProyectItem.EMAIL && <EmailText />}
             {itemSelected === ProyectItem.DASHBOARD && <DashboardsText />}
+            {itemSelected === ProyectItem.OSCAR && <OSCARText />}
           </motion.div>
         )}
       </AnimatePresence>

@@ -5,6 +5,7 @@ import CTI from "../CTI";
 import { Dashboard } from "../Dashboard";
 import Email from "../Email";
 import { HighlightedComponentText } from "./components/HighlightedComponentText";
+import { OSCAR } from "../OSCAR";
 
 function MainArea() {
   return (
@@ -30,6 +31,9 @@ function MainArea() {
         </HighlightedComponent>
         <HighlightedComponent key="dashboard" id={ProyectItem.DASHBOARD}>
           <Dashboard key="dashboard-content" />
+        </HighlightedComponent>
+        <HighlightedComponent key="OSCAR" id={ProyectItem.OSCAR}>
+          <OSCAR key="OSCAR-content" />
         </HighlightedComponent>
       </AnimatePresence>
     </div>
