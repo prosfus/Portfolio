@@ -8,15 +8,23 @@ export function OSCARText() {
         project.
       </p>
       <p>
-        It is an open-source platform that enables the creation of parallel,
-        event-driven, serverless data-processing applications running on custom
-        containerized environments.
+        It is an open-source platform that enables the creation of{" "}
+        <b>parallel</b>, event-driven, <b>serverless</b> <b>data-processing</b>{" "}
+        applications running on custom containerized environments.
       </p>
-      <p>This platform is currently being used by multiple EU projects.</p>
+      <p>
+        Is expected to be used by multiple <b>EU projects</b> in 2025 Q1.
+      </p>
+      <p>
+        <b>Deployment: </b>
+        <a href={"https://dashboard.oscar.grycap.net/"} target="_blank">
+          OSCAR Dashboard
+        </a>
+      </p>
       <p>
         <b>Source code: </b>
         <a href={"https://github.com/grycap/oscar-dashboard"} target="_blank">
-          OSCAR Dashboard
+          Github Repo
         </a>
       </p>
       <h2>Technology stack:</h2>

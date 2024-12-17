@@ -22,6 +22,7 @@ function MainArea() {
       }}
     >
       <HighlightedComponentText />
+
       <AnimatePresence mode="popLayout">
         <HighlightedComponent key="cti" id={ProyectItem.CTI}>
           <CTI key="cti-content" />

@@ -28,12 +28,14 @@ export default function HighlightedComponent({ id, children }: Props) {
               : "blur(0px)",
           opacity: 1,
           scale: 1,
+          marginLeft: isSelected ? "400px" : "0px",
         }}
         exit={{
           filter: "blur(4px)",
           opacity: 0,
           scale: 1,
         }}
+        transition={{ duration: 0.3, type: "spring", bounce: 0 }}
       >
         {children}
       </motion.div>
