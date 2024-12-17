@@ -9,7 +9,7 @@ export function ProyectsList() {
   return (
     <ProyectsListContainer>
       <ProyectSection logo={DialappletLogo} color="#385cc7">
-        <ProyectCard id={ProyectItem.CTI} number="00" name="CTI" />
+        <ProyectCard id={ProyectItem.CTI} number="00" name="DIALER" />
         <ProyectCard id={ProyectItem.EMAIL} number="01" name="EMAIL" />
         <ProyectCard id={ProyectItem.DASHBOARD} number="02" name="DASHBOARD" />
       </ProyectSection>
