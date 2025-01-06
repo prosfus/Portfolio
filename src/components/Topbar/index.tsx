@@ -10,11 +10,26 @@ export function TopBar() {
         padding: "4rem 0 1rem 0",
       }}
     >
-      {/*  <Link text="Pau Rostoll Fuset" link="https://www.google.com" /> */}
       <div>Pau Rostoll Fuset</div>
       <div>CV</div>
-      <div>LinkedIn</div>
-      <div>Github</div>
+      <div>
+        <a
+          href="https://www.linkedin.com/in/prosfus13/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn
+        </a>
+      </div>
+      <div>
+        <a
+          href="https://github.com/prosfus"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Github
+        </a>
+      </div>
     </div>
   );
 }
