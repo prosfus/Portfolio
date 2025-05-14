@@ -11,7 +11,11 @@ export function TopBar() {
       }}
     >
       <div>Pau Rostoll Fuset</div>
-      <div>CV</div>
+      <div>
+        <a href="/Pau Rostoll Fuset.pdf" target="_blank">
+          CV
+        </a>
+      </div>
       <div>
         <a
           href="https://www.linkedin.com/in/prosfus13/"
