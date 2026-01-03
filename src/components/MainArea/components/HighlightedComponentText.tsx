@@ -1,6 +1,7 @@
 import { useItemContext } from "@/context/useItemContext";
 import { ProyectItem } from "@/models/ProyectItem";
 import { AnimatePresence, motion, MotionConfig } from "motion/react";
+import { TruconlineText } from "./texts/TruconlineText";
 import { CTIText } from "./texts/CTIText";
 import { EmailText } from "./texts/EmailText";
 import { DashboardsText } from "./texts/DashboardsText";
@@ -28,6 +29,7 @@ export function HighlightedComponentText() {
               gap: "1rem",
             }}
           >
+            {itemSelected === ProyectItem.TRUCONLINE && <TruconlineText />}
             {itemSelected === ProyectItem.CTI && <CTIText />}
             {itemSelected === ProyectItem.EMAIL && <EmailText />}
             {itemSelected === ProyectItem.DASHBOARD && <DashboardsText />}

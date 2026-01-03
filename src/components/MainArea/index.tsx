@@ -1,6 +1,7 @@
 import { AnimatePresence } from "motion/react";
 import HighlightedComponent from "../HighlightedComponent";
 import { ProyectItem } from "@/models/ProyectItem";
+import { Truconline } from "../Truconline";
 import CTI from "../CTI";
 import { Dashboard } from "../Dashboard";
 import Email from "../Email";
@@ -24,6 +25,9 @@ function MainArea() {
       <HighlightedComponentText />
 
       <AnimatePresence mode="popLayout">
+        <HighlightedComponent key="truconline" id={ProyectItem.TRUCONLINE}>
+          <Truconline key="truconline-content" />
+        </HighlightedComponent>
         <HighlightedComponent key="cti" id={ProyectItem.CTI}>
           <CTI key="cti-content" />
         </HighlightedComponent>
